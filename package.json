@@ -1,0 +1,8 @@
+{
+  "name": "wolrss_rewrite",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^2.0.15"
+  }
+}

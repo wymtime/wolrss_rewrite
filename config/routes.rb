@@ -18,14 +18,13 @@ Rails.application.routes.draw do
 
   #post "api/"
 
-  resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :destroy]
-
   # resources :entries, only: [:create_user_entry]
 
   namespace :api, defaults: {format: :json} do
-    resources :categories, only: [:index]
+    resource :session, only: [:new, :create, :destroy]
+    resources :users, only: [:new, :create, :destroy]
 
+    resources :categories, only: [:index]
     resources :categories, only: [:show]
 
     resources :feeds, only: [:index, :show, :create] do

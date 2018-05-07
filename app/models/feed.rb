@@ -3,7 +3,7 @@ load 'opengraph.rb'
 class Feed < ApplicationRecord
   #validates :title, :url, presence: true
 
-  has_many :entries, dependent: :destroy, order: "published_at DESC"
+  has_many :entries, -> { order "published_at DESC" }, dependent: :destroy
   has_many :user_feeds
   has_many :users, through: :user_feeds
 

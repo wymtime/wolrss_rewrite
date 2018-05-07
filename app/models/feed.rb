@@ -1,3 +1,5 @@
+load 'opengraph.rb'
+
 class Feed < ApplicationRecord
   #validates :title, :url, presence: true
 
@@ -9,7 +11,7 @@ class Feed < ApplicationRecord
 
   def reload
     feed_data = Feedjira::Feed.fetch_and_parse(self.url)
-    
+
     if feed_data.is_a?(Fixnum)
       return nil
     end

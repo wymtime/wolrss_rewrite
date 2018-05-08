@@ -11,7 +11,7 @@ class Api::UsersController < ApplicationController
       redirect_to root_url
     else
       flash.now[:errors] = @user.errors.full_messages
-      render :new, status: 422
+      render :show, status: 422
     end
   end
 

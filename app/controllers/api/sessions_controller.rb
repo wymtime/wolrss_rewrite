@@ -11,7 +11,8 @@ class Api::SessionsController < ApplicationController
     if @user
       sign_in!(@user)
       #redirect_to root_url
-      render json: @user, status: 200
+      render "api/users/show", status: 200
+      #render json: @user, status: 200
     else
       #flash.now[:errors] = ["Invalid username/password"]
       #render :new, status: 401

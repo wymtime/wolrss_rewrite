@@ -1,9 +1,12 @@
 import React from 'react';
 import GreetingContainer from './components/greeting/greeting_container';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 
 import LoginFormContainer from './components/session_form/login_form_container';
 import SignupFormContainer from './components/session_form/signup_form_container';
+
+import CategoryIndexContainer from './components/category/category_index_container';
+import CategoryFeedIndexContainer from './components/category/category_feed_index_container';
 
 const App = ({currentUser}) => {
   let sessionHeader = () => (
@@ -12,9 +15,12 @@ const App = ({currentUser}) => {
         <h1><Link to="/">WOLRSS</Link></h1>
         <GreetingContainer />
       </header>
-
-      <Route path="/login" component={LoginFormContainer} />
-      <Route path="/signup" component={SignupFormContainer} />
+      <Switch>
+        <Route path="/login" component={LoginFormContainer} />
+        <Route path="/signup" component={SignupFormContainer} />
+        <Route exact path="/" component={ CategoryIndexContainer } />
+        <Route path="/category/:categoryId" component={ CategoryFeedIndexContainer } />
+      </Switch>
     </div>
   );
 
@@ -24,6 +30,10 @@ const App = ({currentUser}) => {
         <h1><Link to="/">WOLRSS</Link></h1>
         <GreetingContainer />
       </header>
+      <Switch>
+        <Route exact path="/" component={ CategoryIndexContainer } />
+        <Route path="/category/:categoryId" component={ CategoryFeedIndexContainer } />
+      </Switch>
     </div>
   );
 

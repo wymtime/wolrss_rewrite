@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "static_pages#root"
 
+  #get category's feeds
+  
   #titles for entries and feeds
   get "api/feeds/titles", to: "api/feeds#titles"
   get "api/feeds/:feed_id/entries/titles", to: "api/entries#titles"

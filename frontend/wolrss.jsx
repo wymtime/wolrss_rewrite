@@ -6,6 +6,11 @@ import configureStore from './store/store';
 
 import { signup, login, logout } from './actions/session_actions';
 
+
+import { fetchCategories } from './actions/category_actions';
+
+import { allCategories } from './reducers/selectors/category_selector';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 
@@ -22,12 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  window.fetchCategories = fetchCategories;
+  window.allCategories = allCategories;
+
   // window.login = login;
   // window.logout = logout;
   // window.signup = signup;
   //
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 
   // store.dispatch(login({"email": "terd@gmail.com", "password":"bucket6969"}));
 

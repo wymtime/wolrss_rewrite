@@ -1,35 +1,35 @@
 import React from 'react';
 
+import values from 'lodash/values';
+
 import { CategoryFeedIndexItem } from './category_feed_index_item';
 import LoadingIcon from '../shared/loading_icon';
+
+import { selectAllCategoryFeeds } from '../../reducers/selectors/category_selector';
 
 class CategoryFeedIndex extends React.Component {
   constructor(props) {
     super(props);
-    //let { categories } = props;
-    //let category = categories[this.props.match.params.categoryId];
-
-    this.state = {
-      feeds: {},
-      categoryId: this.props.match.params.categoryId
-    };
-
   }
 
   componentDidMount() {
-    this.props.requestCategoryFeeds(this.state.categoryId);
+    this.props.requestCategories();
   }
 
   render() {
-    const { feeds, loading } = this.props;
+    const { loading, categories} = this.props;
+    const categoryId = this.props.match.params.categoryId;
 
     if (loading) { return <LoadingIcon />; }
 
-    return (<section className="category-feed-index">
-      <div>
-        {this.state.feeds.map(feed => <CategoryFeedIndexItem key={feed.id} feed={feed} />)}
-      </div>
-    </section>)
+    let feeds = categories[categoryId].feeds;
+    return (
+      <section className="category-feed-index">
+        <div>
+          {feeds.map(feed => <CategoryFeedIndexItem key={feed.id} feed={feed} />)}
+        </div>
+      </section>
+    );
   }
 }
 

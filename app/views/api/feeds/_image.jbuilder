@@ -1,1 +1,1 @@
-json.extract! feed, :id, :image, :category_id
+json.extract! feed, :id, :image, :title, :category_id

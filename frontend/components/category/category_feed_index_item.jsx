@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const CategoryFeedIndexItem = ({ feed }) => (
   <div className='category-feed-index-item'>
-    <Link to='/feeds/${feed.id}'>
+    <Link to={`/feed/${feed.id}`}>
       <span>{feed.title}</span>
       <img src={feed.image} />
     </Link>

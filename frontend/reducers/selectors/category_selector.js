@@ -10,10 +10,12 @@ export const allCategories = (categories) => {
 
 export const selectAllCategories = state => values(state.entities.categories);
 
-export const selectAllCategoryFeeds = (category) => {
-  let feeds = {};
-  category.feeds.forEach((feed) => {
-    feeds[feed.id] = feed;
-  });
-  return feeds;
-}
+//export const selectAllCategoryFeeds = state => values(state.entities.feeds);
+
+// export const selectAllCategoryFeeds = (category) => {
+//   let feeds = {};
+//   category.feeds.forEach((feed) => {
+//     feeds[feed.id] = feed;
+//   });
+//   return feeds;
+// }

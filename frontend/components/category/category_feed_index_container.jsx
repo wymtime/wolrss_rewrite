@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 
 import CategoryFeedIndex from './category_feed_index';
-import { selectAllFeeds } from '../../reducers/selectors/category_selector';
+import { fetchCategories } from '../../actions/category_actions';
+import { selectAllCategories } from '../../reducers/selectors/category_selector';
 
 const mapStateToProps = (state) => ({
-    feeds: state.entities.feeds
+  categories: state.entities.categories,
+  loading: state.loading.indexLoading
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  requestCategoryFeeds: (categoryId) => dispatch(fetchCategoryFeeds(categoryId))
+  requestCategories: () => dispatch(fetchCategories())
 });
 
 export default connect(

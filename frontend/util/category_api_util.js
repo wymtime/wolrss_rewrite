@@ -4,7 +4,7 @@ export const fetchCategories = () => ($.ajax({
   error: (error) => console.log(error)
 }));
 
-export const fetchCategoryFeeds = (catgoryId) => ($.ajax({
+export const fetchCategoryFeeds = (categoryId) => ($.ajax({
   url: 'api/categories/${categoryId}',
   method: 'GET',
   error: (error) => console.log(error)

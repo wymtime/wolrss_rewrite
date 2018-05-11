@@ -71,6 +71,7 @@ gem 'fastimage'
 gem 'hashie'
 gem 'rest-client'
 gem 'nokogiri'
+gem 'faraday'
 
 gem 'annotate'
 gem 'jquery-rails'

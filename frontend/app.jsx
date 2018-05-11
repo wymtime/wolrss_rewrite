@@ -7,12 +7,12 @@ import SignupFormContainer from './components/session_form/signup_form_container
 
 import CategoryIndexContainer from './components/category/category_index_container';
 import FeedIndexContainer from './components/feed/feed_index_container';
+import EntryIndexContainer from './components/entry/entry_index_container';
 
 const App = ({currentUser}) => {
   let sessionHeader = () => (
     <div>
       <header>
-        <h1><Link to="/">WOLRSS</Link></h1>
         <GreetingContainer />
       </header>
       <Switch>
@@ -20,6 +20,7 @@ const App = ({currentUser}) => {
         <Route path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={ CategoryIndexContainer } />
         <Route path="/category/:categoryId" component={ FeedIndexContainer } />
+        <Route path="/feed/:feedId" component={ EntryIndexContainer } />
       </Switch>
     </div>
   );
@@ -27,12 +28,12 @@ const App = ({currentUser}) => {
   let sessionlessHeader = () => (
     <div>
       <header>
-        <h1><Link to="/">WOLRSS</Link></h1>
         <GreetingContainer />
       </header>
       <Switch>
         <Route exact path="/" component={ CategoryIndexContainer } />
         <Route path="/category/:categoryId" component={ FeedIndexContainer } />
+        <Route path="/feed/:feedId" component={ EntryIndexContainer } />
       </Switch>
     </div>
   );

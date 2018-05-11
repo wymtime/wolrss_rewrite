@@ -10,13 +10,13 @@ class Feed < ApplicationRecord
   belongs_to :category
 
   def reload
-    feed_data = Feedjira::Feed.fetch_and_parse(self.url)
+    xml = fetch(self.url)
+    feed_data = Feedjira::Feed.parse(xml)
 
     if feed_data.is_a?(Fixnum)
       return nil
     end
 
-    # fail
     self.updated_at = Time.now
     self.save!
 
@@ -92,5 +92,15 @@ class Feed < ApplicationRecord
       end
     end
     return nil
+  end
+
+  def fetch(url)
+    conn = Faraday.new(:url => url) do |faraday|
+      faraday.use FaradayMiddleware::FollowRedirects, limit: 3
+      faraday.adapter Faraday.default_adapter
+    end
+
+    response = conn.get url
+    return response.body
   end
 end

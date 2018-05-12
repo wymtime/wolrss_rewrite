@@ -69,7 +69,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/875702138680246273/BfQLzf7G_400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://rss.cnn.com/rss/cnn_topstories.rss",
-  "https://pbs.twimg.com/profile_images/454309589777780736/5mfxlzAs.jpeg", id)
+  "https://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED_400x400.png", id)
 
   Feed.find_or_create_by_url("http://www.reuters.com/rssFeed/topNews",
   "https://pbs.twimg.com/profile_images/877554927932891136/ZBEs235N_400x400.jpg", id)
@@ -78,10 +78,20 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/785208513177985024/Guc3ohmz_400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://www.theguardian.com/uk/rss",
-  "https://pbs.twimg.com/profile_images/2814613165/f3c9e3989acac29769ce01b920f526bb.png", id)
+  "https://pbs.twimg.com/profile_images/952866338187423744/0hj7a-EH_400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://fivethirtyeight.com/all/feed",
   "https://pbs.twimg.com/profile_images/875426588061573121/lpQG3W6i_400x400.jpg", id)
+
+  Feed.find_or_create_by_url("https://abcnews.go.com/abcnews/topstories",
+  "https://pbs.twimg.com/profile_images/877547979363758080/ny06RNTT_400x400.jpg", id)
+
+  Feed.find_or_create_by_url("https://www.aljazeera.com/xml/rss/all.xml",
+  "https://pbs.twimg.com/profile_images/875638617606987776/YBOKib96_400x400.jpg", id)
+
+  Feed.find_or_create_by_url("https://www.buzzfeed.com/index.xml",
+  "https://pbs.twimg.com/profile_images/687767655214891008/n9pHVYUl_400x400.png", id)
+
 
 
 

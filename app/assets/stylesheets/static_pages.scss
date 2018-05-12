@@ -17,8 +17,12 @@ html {
     position: fixed;
     top: 0;
     width: 80%;
+    z-index: 1;
     nav {
-
+      .navbar-home {
+        font-size: 2rem;
+        font-weight: 400;
+      }
     }
   }
 }
@@ -71,7 +75,12 @@ html {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222; }
+    color: #222;
+  }
+  // .navbar-home {
+  //   font-size: 2rem;
+  //   font-weight: 400;
+  // }
   .navbar-session-link {
     float: right;
   }

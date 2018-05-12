@@ -59,7 +59,7 @@ class Api::FeedsController < ApplicationController
     @feed = Feed.find(params[:id])#.entries.limit(50)
 
     # fail
-    
+
     @feed.reload if Time.now - @feed.updated_at > 300.seconds
 
     render partial: "api/feeds/feed", locals: { feed: @feed }

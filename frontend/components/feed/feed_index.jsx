@@ -55,7 +55,7 @@ class FeedIndex extends React.Component {
 
   render() {
     const { loading, feeds} = this.props;
-
+    
     if (loading) { return <LoadingIcon />; }
 
     return (

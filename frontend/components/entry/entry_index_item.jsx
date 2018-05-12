@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 export const EntryIndexItem = ({ entry, className }) => (
   <div className={`entry-index-item columns ${className}`}>
@@ -7,5 +8,6 @@ export const EntryIndexItem = ({ entry, className }) => (
       <img className='entry-image' src={ entry.image } />
     </a>
     <p className='entry-summary'>{ entry.summary }</p>
+    <span className='entry-date'>{entry.published_at ? moment(entry.published_at).fromNow() : moment(entry.created_at).fromNow()}</span>
   </div>
 );

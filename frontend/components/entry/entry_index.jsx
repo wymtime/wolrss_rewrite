@@ -71,6 +71,8 @@ class EntryIndex extends React.Component {
   render() {
     let { loading, entries } = this.props;
 
+    entries = entries.sort((a, b) => ( new Date(b.published_at) - new Date(a.published_at)));
+
     if (loading) {
       return <LoadingIcon />
     }

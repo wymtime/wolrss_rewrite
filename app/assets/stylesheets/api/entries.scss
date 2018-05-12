@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .entry-index {
+  margin-top: 9rem;
   section {
     .entry-index-item {
       .entry-image {
@@ -14,12 +15,19 @@
       .entry-title {
         color: black;
         font-size: 2vw;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 2.5vw;
       }
-      p {
+      .entry-summary {
+        display: block;
         font-size: 1.3vw;
         font-weight: 600;
+        margin-bottom: 0;
+      }
+      .entry-date {
+        color: gray;
+        display: inline-block;
+        margin-bottom: 1.5rem;
       }
     }
   }

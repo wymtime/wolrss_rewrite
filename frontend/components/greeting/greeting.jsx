@@ -8,7 +8,7 @@ const Greeting = ({ currentUser, logout }) => {
     <nav className="login-signup navbar">
       <Link className="navbar-link" to="/">WOLRSS</Link>
       <Link className="navbar-link navbar-session-link" to="/login">Login</Link>
-      <Link className="navbar-link navbar-session-link" to="/signup">Sign up!</Link>
+      <Link className="navbar-link navbar-session-link" to="/signup">Sign up</Link>
     </nav>
   );
   const personalGreeting = () => (

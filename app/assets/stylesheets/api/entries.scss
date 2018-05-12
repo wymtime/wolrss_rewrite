@@ -3,9 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .entry-index {
-  .entry-index-item {
-    .entry-image {
-      width: 100%;
+  section {
+    .entry-index-item {
+      .entry-image {
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 1vw;
+        //width: 100%;
+      }
+      .entry-title {
+        color: black;
+        font-size: 2vw;
+        font-weight: 600;
+        line-height: 2.5vw;
+      }
+      p {
+        font-size: 1.3vw;
+        font-weight: 600;
+      }
     }
   }
 }

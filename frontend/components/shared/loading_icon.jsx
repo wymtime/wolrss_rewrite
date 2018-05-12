@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LoadingIcon = () => (
-  <div class="loading-item">
+  <div className="loading-item">
     <div></div>
     <div></div>
     <div></div>

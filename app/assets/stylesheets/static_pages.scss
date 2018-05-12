@@ -11,6 +11,26 @@ html {
   a {
     text-decoration: none;
   }
+
+  header {
+    padding-bottom: 1.5em;
+  }
+}
+
+.session-form-container {
+  padding-top: 3em;
+  .session-form {
+    margin: auto;
+    width: 50%;
+    .session-header {
+      font-weight: 400;
+    }
+    .session-form-div {
+      .session-input {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (min-width: 750px) {

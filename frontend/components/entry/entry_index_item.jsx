@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const EntryIndexItem = ({ entry }) => (
-  <div className='entry-index-item'>
+export const EntryIndexItem = ({ entry, className }) => (
+  <div className={`entry-index-item columns ${className}`}>
     <a href={entry.url}>
-      <h4 className='entry-title'>{ entry.title }</h4>
+      <span className='entry-title'>{ entry.title }</span>
       <img className='entry-image' src={ entry.image } />
     </a>
     <p className='entry-summary'>{ entry.summary }</p>

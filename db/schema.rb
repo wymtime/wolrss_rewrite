@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_04_071538) do
+ActiveRecord::Schema.define(version: 2018_05_12_033821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 2018_05_04_071538) do
   create_table "entries", force: :cascade do |t|
     t.string "url", null: false
     t.string "title", null: false
-    t.datetime "published_at", null: false
+    t.datetime "published_at"
     t.integer "feed_id", null: false
-    t.string "image", null: false
-    t.text "summary", null: false
+    t.string "image"
+    t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["feed_id"], name: "index_entries_on_feed_id"

@@ -21,9 +21,12 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    #fail
-    sign_out!
-    #redirect_to new_session_url
-    render json: "destroyed", status: 200
+    @user = current_user
+    if @user
+      sign_out!
+      render "api/users/show"
+    else
+      render json: ["Nobody signed in"], status: 404
+    end
   end
 end

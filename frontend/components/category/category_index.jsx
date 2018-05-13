@@ -38,7 +38,7 @@ class CategoryIndex extends React.Component {
     if (categories.length === 2) className = 'six';
     if (categories.length === 1)  className = 'twelve';
     return (
-      <div className='row'>
+      <div className='row category-index-row'>
         {categories.map(category => <CategoryIndexItem className={className} key={category.id} category={category} />)}
       </div>
     );

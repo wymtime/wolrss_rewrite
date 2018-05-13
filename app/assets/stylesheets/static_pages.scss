@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
+  background-color: #f5f5f5;
   @font-face {
     font-family: "Raleway-Medium";
     src:font-url("../../fonts/Raleway-Medium.ttf") format("truetype");
@@ -19,9 +20,17 @@ html {
     width: 80%;
     z-index: 1;
     nav {
+      background-color: #f5f5f5;
       .navbar-home {
         font-size: 2rem;
         font-weight: 400;
+      }
+      .header-name {
+        float: right;
+      }
+      .logout-button {
+        float: right;
+        cursor: pointer;
       }
     }
   }
@@ -52,10 +61,10 @@ html {
     display: block;
     width: 100%;
     height: 6.5rem;
-    background: #fff;
+    background: #f5f5f5;
     z-index: 99;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee; }
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb; }
   .navbar-spacer {
     display: none; }
   .navbar > .container {

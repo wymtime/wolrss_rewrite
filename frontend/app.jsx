@@ -9,6 +9,8 @@ import CategoryIndexContainer from './components/category/category_index_contain
 import FeedIndexContainer from './components/feed/feed_index_container';
 import EntryIndexContainer from './components/entry/entry_index_container';
 
+import { AuthRoute } from './util/route_util';
+
 const App = ({currentUser}) => {
   let sessionHeader = () => (
     <div>
@@ -16,8 +18,8 @@ const App = ({currentUser}) => {
         <GreetingContainer />
       </header>
       <Switch>
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={ CategoryIndexContainer } />
         <Route path="/category/:categoryId" component={ FeedIndexContainer } />
         <Route path="/feed/:feedId" component={ EntryIndexContainer } />

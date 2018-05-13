@@ -10,10 +10,6 @@ import { selectAllFeeds } from '../../reducers/selectors/feed_selector';
 class FeedIndex extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.createSection = this.createSection.bind(this);
-    // this.createRow = this.createRow.bind(this);
-    // this.createFeedIndexItem = this.createFeedIndexItem.bind(this);
   }
 
   componentDidMount() {
@@ -55,7 +51,7 @@ class FeedIndex extends React.Component {
 
   render() {
     const { loading, feeds} = this.props;
-    
+
     if (loading) { return <LoadingIcon />; }
 
     return (

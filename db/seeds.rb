@@ -284,9 +284,6 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/378800000059052332/60e6bc4dfba2dacd2fd12445abd6efb3_400x400.jpeg", id)
 
 
-  # Feed.find_or_create_by_url("http://feeds.feedburner.com/SFstyle",
-  # "https://pbs.twimg.com/profile_images/2794778110/95f5e27740f4fcebcaae18598d3021b1.png", id)
-
   id = Category.find_by_title("Marketing")
 
   Feed.find_or_create_by_url("https://blog.hubspot.com/marketing/rss.xml",
@@ -346,7 +343,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/838986141902610432/RuJWQ2Mn_400x400.jpg", id)
 
   #
-  #id = Category.find_by_title("Photography")
+  id = Category.find_by_title("Photography")
 
   Feed.find_or_create_by_url("https://iso.500px.com/feed",
   "https://pbs.twimg.com/profile_images/864200552506208256/wdGxW1ko_400x400.jpg", id)
@@ -361,70 +358,61 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/211156611/avatar_400x400.jpg", id)
 
   #
-  #id = Category.find_by_title("Entertainment")
+  id = Category.find_by_title("Entertainment")
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://feeds.feedburner.com/EtsBreakingNews",
+  "https://pbs.twimg.com/profile_images/909905287984832512/jn1Ot_Oj_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://www.tmz.com/rss.xml",
+  "https://pbs.twimg.com/profile_images/948698715220410368/EkNILtvi_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://feeds.accesshollywood.com/AccessHollywood/LatestNews?_ga=2.142642421.1389580908.1526252801-1006887570.1526252801",
+  "https://pbs.twimg.com/profile_images/940196323357212672/yM7Buo0f_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://www.esquire.com/rss/entertainment.xml/",
+  "https://pbs.twimg.com/profile_images/862046057303351296/bocaIajL_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
   #
-  #id = Category.find_by_title("Science")
+  id = Category.find_by_title("Science")
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://rss.sciam.com/ScientificAmerican-News",
+  "https://pbs.twimg.com/profile_images/676776763431620608/1eNZzxq0_400x400.png", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://www.popularmechanics.com/rss/all.xml/",
+  "https://pbs.twimg.com/profile_images/812327935319293952/Yuw9IY2k_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://www.sciencedaily.com/rss/all.xml",
+  "https://pbs.twimg.com/profile_images/887738529668673536/LQyAlyUh_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://www.sciencemag.org/rss/news_current.xml",
+  "https://pbs.twimg.com/profile_images/885961364644261888/k2uehOaU_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
   #
-  #id = Category.find_by_title("Sports")
+  id = Category.find_by_title("Sports")
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://www.espn.com/espn/rss/news",
+  "https://pbs.twimg.com/profile_images/984280988699234304/VYthX7o1_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU",
+  "https://pbs.twimg.com/profile_images/824007776489738241/pFk_8LLO_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://rss.cbssports.com/rss/headlines/",
+  "https://pbs.twimg.com/profile_images/876873707406319616/nIgd2BNe_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://www.si.com/rss/si_topstories.rss",
+  "https://pbs.twimg.com/profile_images/876883699559780352/ixURaEXt_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
   #
-  #id = Category.find_by_title("Health")
+  id = Category.find_by_title("Health")
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://www.health.com/news/feed",
+  "https://pbs.twimg.com/profile_images/875380001159380992/k80-BjQp_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://www.mayoclinic.org/rss/all-news",
+  "https://pbs.twimg.com/profile_images/878347163272486912/ktSje-hR_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("http://www.health.harvard.edu/blog/feed",
+  "https://pbs.twimg.com/profile_images/897872949998387200/aLAkB7yk_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("",
-  "", id)
-
-  Feed.find_or_create_by_url("",
-  "", id)
+  Feed.find_or_create_by_url("https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/section/health/rss.xml",
+  "https://pbs.twimg.com/profile_images/963808360045854721/LOqp5i2R_400x400.jpg", id)

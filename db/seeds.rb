@@ -24,7 +24,7 @@ ActiveRecord::Base.transaction do
     {title: "Design"},
     {title: "Fashion"},
     {title: "Marketing"},
-    {title: "Cooking"},
+    {title: "Food"},
     {title: "DIY"},
     {title: "Photography"},
     {title: "Entertainment"},
@@ -47,8 +47,8 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/454380975095414784/xiBiLgZe_400x400.png", id)
   Feed.find_or_create_by_url("http://www.factmag.com/feed/",
   "https://pbs.twimg.com/profile_images/911154084073308160/ggEMZ5eu_400x400.jpg", id)
-  Feed.find_or_create_by_url("http://hypem.com/feed/popular/3day/1/feed.xml",
-  "https://pbs.twimg.com/profile_images/527101684082692096/M4viLDF0_400x400.png", id)
+  # Feed.find_or_create_by_url("http://hypem.com/feed/popular/3day/1/feed.xml",
+  # "https://pbs.twimg.com/profile_images/527101684082692096/M4viLDF0_400x400.png", id)
   Feed.find_or_create_by_url("http://theboombox.com/feed",
   "https://pbs.twimg.com/profile_images/344513261578427446/39f780221890d8540d0e61a4ec238f44_400x400.jpeg", id)
   Feed.find_or_create_by_url("http://drownedinsound.com/feed",
@@ -256,8 +256,8 @@ ActiveRecord::Base.transaction do
   Feed.find_or_create_by_url("http://www.gq.com/services/rss/feeds/latest.xml",
   "https://pbs.twimg.com/profile_images/745329700512358402/IRo9CY0o_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("http://www.vogue.com/feed",
-  "https://pbs.twimg.com/profile_images/949349571087536129/jClOJzBv_400x400.jpg", id)
+  # Feed.find_or_create_by_url("http://www.vogue.com/feed",
+  # "https://pbs.twimg.com/profile_images/949349571087536129/jClOJzBv_400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://www.whowhatwear.com/rss",
   "https://pbs.twimg.com/profile_images/786559168807309312/J31jgtHy_400x400.jpg", id)
@@ -265,8 +265,8 @@ ActiveRecord::Base.transaction do
   Feed.find_or_create_by_url("http://purple.fr/feed/",
   "https://scontent-lax3-1.cdninstagram.com/vp/188f62e71e57a78ce2dba597cfb0168c/5B87A8B3/t51.2885-19/s150x150/29094571_397511577380338_4531719710265311232_n.jpg", id)
 
-  Feed.find_or_create_by_url("http://www.fashionmagazine.com/feed",
-  "https://pbs.twimg.com/profile_images/848895619766681601/Pq0E0ipO_400x400.jpg", id)
+  # Feed.find_or_create_by_url("http://www.fashionmagazine.com/feed",
+  # "https://pbs.twimg.com/profile_images/848895619766681601/Pq0E0ipO_400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://lookbook.nu/rss",
   "https://pbs.twimg.com/profile_images/816356757941456899/mzd5WZqy_400x400.jpg", id)
@@ -274,8 +274,8 @@ ActiveRecord::Base.transaction do
   Feed.find_or_create_by_url("http://www.theblondesalad.com/feed",
   "https://pbs.twimg.com/profile_images/602131075557629952/WtRsovGo_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("http://www.refinery29.com/fashion/rss.xml",
-  "https://pbs.twimg.com/profile_images/848161466213691395/lNcTj-L__400x400.jpg", id)
+  # Feed.find_or_create_by_url("http://www.refinery29.com/fashion/rss.xml",
+  # "https://pbs.twimg.com/profile_images/848161466213691395/lNcTj-L__400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://www.popsugar.com/fashion/feed",
   "https://pbs.twimg.com/profile_images/674732932745920512/esBu3m8J_400x400.png", id)
@@ -284,10 +284,10 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/378800000059052332/60e6bc4dfba2dacd2fd12445abd6efb3_400x400.jpeg", id)
 
 
-  id = Category.find_by_title("Marketing")
+  id = Category.find_by_title("Marketing").id
 
-  Feed.find_or_create_by_url("https://blog.hubspot.com/marketing/rss.xml",
-  "https://pbs.twimg.com/profile_images/931608729174372352/CvDh2aKQ_400x400.jpg", id)
+  # Feed.find_or_create_by_url("https://blog.hubspot.com/marketing/rss.xml",
+  # "https://pbs.twimg.com/profile_images/931608729174372352/CvDh2aKQ_400x400.jpg", id)
 
   Feed.find_or_create_by_url("https://moz.com/blog/feed",
   "https://pbs.twimg.com/profile_images/991028078385090560/gxyqHomH_400x400.jpg", id)
@@ -302,7 +302,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/935270007331749888/xZNXud5R_400x400.jpg", id)
 
   #
-  id = Category.find_by_title("Food")
+  id = Category.find_by_title("Food").id
 
   Feed.find_or_create_by_url("https://www.eater.com/rss/index.xml",
   "https://pbs.twimg.com/profile_images/513845495882477568/UDiDBo66_400x400.png", id)
@@ -328,7 +328,7 @@ ActiveRecord::Base.transaction do
   Feed.find_or_create_by_url("https://eatyourworld.com/rss/what_to_eat",
   "https://pbs.twimg.com/profile_images/378800000539414244/8e7bd996dbf4a3c1d7ec1e3ae04bef8b_400x400.jpeg", id)
   #
-  id = Category.find_by_title("DIY")
+  id = Category.find_by_title("DIY").id
 
   Feed.find_or_create_by_url("https://www.popsci.com/rss-diy.xml",
   "https://pbs.twimg.com/profile_images/915646486381084672/y9rvRKcy_400x400.jpg", id)
@@ -343,7 +343,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/838986141902610432/RuJWQ2Mn_400x400.jpg", id)
 
   #
-  id = Category.find_by_title("Photography")
+  id = Category.find_by_title("Photography").id
 
   Feed.find_or_create_by_url("https://iso.500px.com/feed",
   "https://pbs.twimg.com/profile_images/864200552506208256/wdGxW1ko_400x400.jpg", id)
@@ -358,10 +358,10 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/211156611/avatar_400x400.jpg", id)
 
   #
-  id = Category.find_by_title("Entertainment")
+  id = Category.find_by_title("Entertainment").id
 
   Feed.find_or_create_by_url("http://feeds.feedburner.com/EtsBreakingNews",
-  "https://pbs.twimg.com/profile_images/909905287984832512/jn1Ot_Oj_400x400.jpg", id)
+  "https://pbs.twimg.com/profile_images/996075416896069632/WyklK6si_400x400.jpg", id)
 
   Feed.find_or_create_by_url("http://www.tmz.com/rss.xml",
   "https://pbs.twimg.com/profile_images/948698715220410368/EkNILtvi_400x400.jpg", id)
@@ -373,7 +373,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/862046057303351296/bocaIajL_400x400.jpg", id)
 
   #
-  id = Category.find_by_title("Science")
+  id = Category.find_by_title("Science").id
 
   Feed.find_or_create_by_url("http://rss.sciam.com/ScientificAmerican-News",
   "https://pbs.twimg.com/profile_images/676776763431620608/1eNZzxq0_400x400.png", id)
@@ -388,7 +388,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/885961364644261888/k2uehOaU_400x400.jpg", id)
 
   #
-  id = Category.find_by_title("Sports")
+  id = Category.find_by_title("Sports").id
 
   Feed.find_or_create_by_url("http://www.espn.com/espn/rss/news",
   "https://pbs.twimg.com/profile_images/984280988699234304/VYthX7o1_400x400.jpg", id)
@@ -403,7 +403,7 @@ ActiveRecord::Base.transaction do
   "https://pbs.twimg.com/profile_images/876883699559780352/ixURaEXt_400x400.jpg", id)
 
   #
-  id = Category.find_by_title("Health")
+  id = Category.find_by_title("Health").id
 
   Feed.find_or_create_by_url("http://www.health.com/news/feed",
   "https://pbs.twimg.com/profile_images/875380001159380992/k80-BjQp_400x400.jpg", id)
@@ -414,5 +414,7 @@ ActiveRecord::Base.transaction do
   Feed.find_or_create_by_url("http://www.health.harvard.edu/blog/feed",
   "https://pbs.twimg.com/profile_images/897872949998387200/aLAkB7yk_400x400.jpg", id)
 
-  Feed.find_or_create_by_url("https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/section/health/rss.xml",
-  "https://pbs.twimg.com/profile_images/963808360045854721/LOqp5i2R_400x400.jpg", id)
+  Feed.find_or_create_by_url("https://www.telegraph.co.uk/news/rss.xml",
+  "https://pbs.twimg.com/profile_images/943090005723041792/2cjxINlJ_400x400.jpg", id)
+
+end

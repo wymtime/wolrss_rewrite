@@ -15,7 +15,7 @@
         z-index: 1;
         margin-left: 4%;
         margin-top: 3%;
-        font-size: 14px;
+        font-size: 1.4vw;
       }
       a {
         border-radius: 6px;
@@ -55,6 +55,29 @@
             top: 50%;
             border-radius: 0 0 6px 0;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 549px) {
+  .category-index {
+    .category-index-row {
+      margin-bottom: 0rem;
+      .category-index-item {
+        min-height: 42.5vw;
+        margin-bottom: 2vw;
+        width: 48%;
+        margin-right: 1%;
+        margin-left: 1%;
+        .category-index-title {
+        }
+        .category-feed-images {
+        }
+        a {
+          min-height: 41.5vw;
+          height: auto;
         }
       }
     }

@@ -3,13 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .entry-index {
-  margin-top: 9rem;
+  margin-top: 9vw;
   section {
     .entry-index-item {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background-color: #eee;
+      padding: 2vw;
+      margin-bottom: 2vw;
       .entry-image {
         border-radius: 6px;
         width: 100%;
-        margin-top: 1vw;
+        //margin-top: 1vw;
         margin-bottom: 0.5vw;
         //width: 100%;
       }
@@ -29,8 +34,33 @@
       .entry-date {
         color: gray;
         display: inline-block;
+        font-size: 1vw;
         margin-bottom: 1.5rem;
       }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 549px) {
+  .entry-index {
+    section {
+      .entry-index-item {
+        //width: 50%;
+        .entry-title {
+          font-size: 12.5px;
+          line-height: 4vw;
+          margin-bottom: 1vw;
+        }
+        .entry-summary {
+          font-size: 9px;
+        }
+        .entry-date {
+          font-size: 8px;
+        }
+      }
+    }
+    .column, .columns {
+      //width: 50%;
     }
   }
 }

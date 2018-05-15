@@ -37,14 +37,17 @@ class FeedIndex extends React.Component {
   }
 
   createRow(feeds) {
-    let className;
-    if (feeds.length === 4) className = 'three';
-    if (feeds.length === 3) className = 'four';
-    if (feeds.length === 2) className = 'six';
-    if (feeds.length === 1)  className = 'twelve';
+    let dummyDivs = [];
+    let className = 'three';
+
+    if (feeds.length === 3) dummyDivs = [0];
+    if (feeds.length === 2) dummyDivs = [0,0];
+    if (feeds.length === 1) dummyDivs = [0,0,0];
+
     return (
       <div className='row'>
         {feeds.map(feed => <FeedIndexItem className={className} key={feed.id} feed={feed} />)}
+        {dummyDivs.map(div => <div className={`${className} columns feed-index-item`}></div>)}
       </div>
     );
   }

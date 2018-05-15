@@ -10,7 +10,8 @@ module OpenGraph
   # Pass <tt>false</tt> for the second argument if you want to
   # see invalid (i.e. missing a required attribute) data.
   def self.fetch(uri, strict = true)
-    parse(RestClient.get(uri).body, strict)
+    encoded_uri = URI.encode(uri)
+    parse(RestClient.get(encoded_uri).body, strict)
   rescue RestClient::Exception, SocketError
     false
   end

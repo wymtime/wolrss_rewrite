@@ -13,7 +13,7 @@ class Feed < ApplicationRecord
     xml = fetch(self.url)
     feed_data = Feedjira::Feed.parse(xml)
 
-    if feed_data.is_a?(Fixnum)
+    if feed_data.is_a?(Integer)
       return nil
     end
 
@@ -35,7 +35,7 @@ class Feed < ApplicationRecord
 
     feed_data = Feedjira::Feed.fetch_and_parse(url)
 
-    if feed_data.is_a?(Fixnum)
+    if feed_data.is_a?(Integer)
       return nil
     end
 
@@ -62,7 +62,7 @@ class Feed < ApplicationRecord
     new_entry.url = entry.url
     new_entry.title = entry.title
     new_entry.feed_id = feed_id
-    new_entry.published_at = entry.published
+    new_entry.published_at = entry.published || Time.now
 
     og = OpenGraph.fetch(entry.url)
 

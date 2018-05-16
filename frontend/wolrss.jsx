@@ -26,16 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
-  window.fetchCategories = fetchCategories;
-  window.allCategories = allCategories;
-
-  // window.login = login;
-  // window.logout = logout;
-  // window.signup = signup;
+  // 
+  // window.fetchCategories = fetchCategories;
+  // window.allCategories = allCategories;
   //
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // // window.login = login;
+  // // window.logout = logout;
+  // // window.signup = signup;
+  // //
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
 
   // store.dispatch(login({"email": "terd@gmail.com", "password":"bucket6969"}));
 

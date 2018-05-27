@@ -26,19 +26,19 @@ class CategoryIndex extends React.Component {
     }
     return (
       <section>
-        {categorySections.map(categorySection => this.createRow(categorySection))}
+        {categorySections.map((categorySection, idx) => this.createRow(categorySection, idx))}
       </section>
     );
   }
 
-  createRow(categories) {
+  createRow(categories, index) {
     let className;
     if (categories.length === 4) className = 'three';
     if (categories.length === 3) className = 'four';
     if (categories.length === 2) className = 'six';
     if (categories.length === 1)  className = 'twelve';
     return (
-      <div className='row category-index-row'>
+      <div className='row category-index-row' key={index}>
         {categories.map(category => <CategoryIndexItem className={className} key={category.id} category={category} />)}
       </div>
     );
